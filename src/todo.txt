@@ -1,0 +1,9 @@
+1. set up redux - to manahe out app - done
+2. set up reducers and actions - done
+3. setup chat -- done
+4. chat queue -- donen
+5. display messages to the user - done
+7. handle sending users message to app
+8. Bots response to queue
+9. handle edit messages - done 
+9. formatting

@@ -1,0 +1,46 @@
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.chatbox{
+    /* width: 400px;
+    height: 80vh; */
+    border: 5px #8b4513;
+    /* overflow-y: scroll; */
+    background-color: seashell;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.incoming {
+    display: flex;
+    border : 1px solid blue;
+    border-radius:15px 15px 0px 15px;
+    justify-content: flex-end ; 
+    margin-left: 50%;
+    margin-top: 25px;
+    padding: 3px;
+    /* width: 50%; */
+}
+
+.outgoing {
+    display: flex;
+    margin-top: 5px;
+    justify-content: flex-start;
+    border : 1px solid blue;
+    border-radius: 15px 15px 15px 0px;
+    width: 50%;
+    padding: 3px;
+}
+
+.inputBox{
+    border: 0;
+    border-bottom: 1px solid black;   
+    height: 20px;
+    /* width: 400px; */
+    outline: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
