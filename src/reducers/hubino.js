@@ -34,6 +34,14 @@ export default (state=initialState,action) => {
             return{
                 ...state
             }
+        case OUT_GOING_SUCCESS :
+            return {
+                ...state
+            }
+        case OUT_GOING_FAIL :
+            return {
+                ...state
+            }
         default :
             return {
                 ...state

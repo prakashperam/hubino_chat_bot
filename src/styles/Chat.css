@@ -2,15 +2,26 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.chatbox{
-    /* width: 400px;
-    height: 80vh; */
+.mainHeader{
+    text-align: center;
+    width: 100%;
+    font-size: small;
+    color: grey;
+}
+
+#chatbox{
     border: 5px #8b4513;
     /* overflow-y: scroll; */
     background-color: seashell;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
 
+}
+.chat {
+    flex :1;
+    border: 1px red;
 }
 
 .incoming {
@@ -21,7 +32,7 @@
     margin-left: 50%;
     margin-top: 25px;
     padding: 3px;
-    /* width: 50%; */
+    width: 45%;
 }
 
 .outgoing {
@@ -30,17 +41,44 @@
     justify-content: flex-start;
     border : 1px solid blue;
     border-radius: 15px 15px 15px 0px;
-    width: 50%;
+    width: 45%;
     padding: 3px;
 }
 
 .inputBox{
-    border: 0;
     border-bottom: 1px solid black;   
     height: 20px;
-    /* width: 400px; */
     outline: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
     margin-top: 20px;
+    border : 5px green;
+    border-radius: 15px;
+
+}
+
+.textMessage{
+    padding: 5px;
+}
+
+.inputContainer{
+    border : 5px green;
+    border-radius: 15px;
+    position:fixed;
+    bottom:0px;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+}
+
+.timestamp{
+    color: rgba(13, 17, 9, 0.527);
+    float: right;
+    margin: inherit;
+    padding: 8px;
+    font-size: x-small;
+}
+.incoming_text {
+  clear:right;
+  float: left;  
 }

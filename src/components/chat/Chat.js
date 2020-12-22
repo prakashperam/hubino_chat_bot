@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {connect} from 'react-redux';
 // import Button from './UserEdit'
+import TimeStamp from './TimeStamp'
 import '../../styles/Chat.css'
 
 //import action 
@@ -13,6 +14,7 @@ const Chat = ({chat, outGoing, userMessage}) => {
     const [response, setResponse] = useState('');
     const endOfMessages = useRef('');
 
+    //smooth scrolling chat to bottom
     const scrollToBottom = () => {
       endOfMessages.current.scrollIntoView({ behavior: "smooth" });
     };
@@ -56,24 +58,26 @@ const Chat = ({chat, outGoing, userMessage}) => {
 
     return (
         <div className='chat'>
-            <h1>Hubino Chat Bot</h1>
+            <h1 className="mainHeader">Hubino Chat Bot</h1>
             {/* diplay messages here */}
             {/* //In UI add two different sides left and right  */}
             <div className='chatbox'>
                 {chat.length ===0 ? '' : chat.map((msg)=>
-                    msg.type==='incoming'?<div onClick = {userHandleEdit} className = {msg.type} >
-                    {msg.message} </div> :<div className = {msg.type} >
-                    {msg.message} </div>)}
+                    msg.type==='incoming'?<><div onClick = {userHandleEdit} className = {msg.type} >
+                    <span className='textMessage'>{msg.message}</span> </div> <div className='timestamp'> <TimeStamp/></div> </> : <><div className = {msg.type} >
+                    <span className='textMessage'>{msg.message}</span> </div> <div className='timestamp incoming_text'> <TimeStamp/></div></>)}
                     {/* to set the scroll bar to end of messages */}
                     <div ref={endOfMessages}></div>
             </div>
-            <input id='chatbox' 
-            onChange={(e)=>setMessage(e.target.value)} 
-            onKeyPress={handleClick} value={message}
-            placeholder = 'Type your message..'
-            className='inputBox'
+            <div className='inputContainer' >
+                <input id='chatbox' 
+                 onChange={(e)=>setMessage(e.target.value)} 
+                onKeyPress={handleClick} value={message}
+                placeholder = 'Type your message..'
+                className='inputBox'
             >
             </input>
+            </div>
             
         </div>
     )
